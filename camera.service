@@ -1,0 +1,14 @@
+[Unit]
+Description=raspberry pi camera
+After=getty.target
+
+[Service]
+ExecStart=/usr/bin/python camera.py
+WorkingDirectory=/home/pi/camera
+StandardOutput=inherit
+StandardError=inherit
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
