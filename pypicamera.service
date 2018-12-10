@@ -3,8 +3,8 @@ Description=raspberry pi camera
 After=getty.target
 
 [Service]
-ExecStart=/usr/bin/python camera.py
-WorkingDirectory=/home/pi/camera
+ExecStart=/usr/bin/python pypicamera.py
+WorkingDirectory=/home/pi/pypicamera
 StandardOutput=inherit
 StandardError=inherit
 Restart=on-failure
