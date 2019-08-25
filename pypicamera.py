@@ -8,7 +8,8 @@ import picamera
 import time
 import os
 
-delay = 8
+delay = 10
+quality = 21
 
 
 if not os.path.exists("camimages"):
@@ -37,6 +38,6 @@ with picamera.PiCamera() as camera:
     #let's capture continuously:
     camera.start_preview()
     time.sleep(2)
-    for filename in camera.capture_continuous('camimages/{timestamp:%Y%m%d%H%M%S}.jpg',format='jpeg',quality=93):
+    for filename in camera.capture_continuous('camimages/{timestamp:%Y%m%d%H%M%S}.jpg',format='jpeg',quality=quality):
         print("%s captured, sleeping %i sec.." % (filename,delay))
         time.sleep(delay)

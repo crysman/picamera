@@ -4,6 +4,7 @@ a python script for a timelapse video - capturing JPEG stills every N sec
 
 to start automatically every (re)boot, make a symlink into /etc/systemd:
 
-    sudo ln -s ~/pypicamera.service /etc/systemd/system/pypicamera.service
+    sudo ln -s ~/pypicamera/pypicamera.service /etc/systemd/system/pypicamera.service
+    sudo systemctl enable pypicamera
 
-crysman (copyleft) 2018-10
+crysman (copyleft) 2018-2019
